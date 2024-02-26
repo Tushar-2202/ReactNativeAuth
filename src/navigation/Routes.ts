@@ -7,6 +7,7 @@ const Routes = {
     Login: "Login",
     Home: "Home",
     Profile: "Profile",
+    ForgotPassword: "ForgotPassword",
 } as const;
 
 export default Routes;

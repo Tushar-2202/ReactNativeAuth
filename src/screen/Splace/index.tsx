@@ -16,8 +16,6 @@ const Splace = ({ navigation }: Props) => {
 
   const user = useSelector((state: any) => state.userReducer.userInfo)
 
-  console.log('user', user)
-
   return (
     <View style={styles.container}>
       <LottieView

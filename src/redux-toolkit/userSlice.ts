@@ -3,8 +3,8 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 export interface UserInfo {
     uuid?: string;
     name?: string | null;
-    email: string;
-    password?: string;
+    email: string | null;
+    password?: string | null;
     profileImage?: string | null;
 }
 
@@ -27,10 +27,10 @@ const userSlice = createSlice({
             state.userInfo = null;
         },
         editUser: (state, action: PayloadAction<UserInfo>) => {
-            state.userInfo = action.payload;
+            state.userInfo = { ...state.userInfo,...action.payload};
         }
     }
 });
 
-export const { addUser, logOut, editUser } = userSlice.actions;
+export const { addUser, logOut,editUser} = userSlice.actions;
 export default userSlice.reducer;

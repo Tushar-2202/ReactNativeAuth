@@ -5,11 +5,12 @@ import Routes from './Routes';
 import Signup from '../screen/Signup';
 import Login from '../screen/Login';
 import { Colors } from '../utils';
+import ForgotPassword from '../screen/ForgotPassword';
 
 export type UnAuthenticatedNavigatorType = {
-  Welcome: undefined;
   Signup: undefined;
   Login: undefined;
+  ForgotPassword: undefined;
 };
 
 const Stack = createNativeStackNavigator<UnAuthenticatedNavigatorType>();
@@ -27,6 +28,7 @@ const UnAuthenticated = () => {
     >
       <Stack.Screen name={Routes.Signup} component={Signup} />
       <Stack.Screen name={Routes.Login} component={Login} />
+      <Stack.Screen name={Routes.ForgotPassword} component={ForgotPassword}/>
     </Stack.Navigator>
   )
 }

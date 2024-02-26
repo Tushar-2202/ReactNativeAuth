@@ -1,6 +1,6 @@
 import { View, Text, Modal, Button } from 'react-native'
-import React, { useState } from 'react'
-import styles from './style'
+import React from 'react'
+import styles from './style' 
 
 const AlertModal = (
   {
@@ -10,7 +10,6 @@ const AlertModal = (
     visible: boolean,
     setVisible: React.Dispatch<React.SetStateAction<boolean>>
   }
-
 ) => {
   return (
     <Modal
